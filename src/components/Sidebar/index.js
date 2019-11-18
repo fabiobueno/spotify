@@ -1,7 +1,7 @@
-import React from 'react'
-import {Container, NewPlaylist, Nav} from './styles'
+import React from "react";
+import { Container, NewPlaylist, Nav } from "./styles";
 
-import AddPlaylistIcon from '../../assets/images/add_playlist.svg'
+import AddPlaylistIcon from "../../assets/images/add_playlist.svg";
 
 const Sidebar = () => (
   <Container>
@@ -47,9 +47,7 @@ const Sidebar = () => (
 
       <Nav>
         <li>
-          <span>
-            PLAYLISTS
-          </span>
+          <span>PLAYLISTS</span>
         </li>
         <li>
           <a href="">Melhores do Rock</a>
@@ -57,7 +55,7 @@ const Sidebar = () => (
       </Nav>
     </div>
     <NewPlaylist>
-      <img src={AddPlaylistIcon} alt="Adicionar Playlist"/>
+      <img src={AddPlaylistIcon} alt="Adicionar Playlist" />
       Nova playlist
     </NewPlaylist>
   </Container>

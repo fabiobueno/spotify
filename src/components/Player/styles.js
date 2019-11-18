@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
   height: 72px;
@@ -18,65 +18,64 @@ export const Current = styled.div`
     height: 48px;
   }
 
-  div{
+  div {
     margin-left: 12px;
-    display:flex;
+    display: flex;
     flex-direction: column;
 
-    span{
+    span {
       font-size: 13px;
-      color: #FFF;
+      color: #fff;
     }
 
-    small{
-      font-size:11px;
+    small {
+      font-size: 11px;
       color: #b3b3b3;
-      margin-top:5px;
+      margin-top: 5px;
     }
   }
-
 `;
 
 export const Progress = styled.div`
-   display:flex;
-   flex-direction:column;
-   align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Controls = styled.div`
-   display:flex;
-   align-items: center;
+  display: flex;
+  align-items: center;
 
-   button{
-      background: transparent;
-      border:0;
-      margin: 0 15px;
-   }
+  button {
+    background: transparent;
+    border: 0;
+    margin: 0 15px;
+  }
 `;
 
 export const Time = styled.div`
-  display:flex;
+  display: flex;
   align-items: center;
   margin-top: 5px;
 
-  span{
-    font-size:11px;
-    color:#b3b3b3;
+  span {
+    font-size: 11px;
+    color: #b3b3b3;
   }
 `;
 
 export const ProgressSlider = styled.div`
   width: 500px;
-  margin:0 15px;
+  margin: 0 15px;
 `;
 
 export const Volume = styled.div`
-  display:flex;
-  align-items:center;
-  width:100px;
-  margin-right:20px;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  margin-right: 20px;
 
-  img{
+  img {
     margin-right: 5px;
   }
 `;
