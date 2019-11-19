@@ -15,7 +15,11 @@ const sagaMiddleware = createSagaMiddleware({ sagaMonitor });
 
 middlewares.push(sagaMiddleware);
 
-const store = createStore(reducers, compose(applyMiddleware(...middlewares)));
+const store = createStore(
+  reducers,
+  {},
+  compose(applyMiddleware(...middlewares))
+);
 
 sagaMiddleware.run(sagas);
 
