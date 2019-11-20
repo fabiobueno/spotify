@@ -1,5 +1,9 @@
 import React from "react";
 import Slider from "rc-slider";
+import Sound from "react-sound";
+import PropTypes from "prop-types";
+
+import { connect } from "react-redux";
 
 import {
   Container,
@@ -19,8 +23,14 @@ import PauseIcon from "../../assets/images/pause.svg";
 import ForwardIcon from "../../assets/images/forward.svg";
 import RepeatIcon from "../../assets/images/repeat.svg";
 
-const Player = () => (
+const Player = ({ player }) => (
   <Container>
+    {!!player.currentSong && (
+      <Sound
+        url={player.currentSong.file}
+        playStatus={player.currentSong.status}
+      ></Sound>
+    )}
     <Current>
       <img
         src="https://images.theconversation.com/files/258026/original/file-20190208-174861-nms2kt.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
@@ -77,4 +87,17 @@ const Player = () => (
   </Container>
 );
 
-export default Player;
+Player.propTypes = {
+  player: PropTypes.shape({
+    currentSong: PropTypes.shape({
+      file: PropTypes.string,
+      status: PropTypes.string
+    })
+  }).isRequired
+};
+
+const mapStateToProps = state => ({
+  player: state.player
+});
+
+export default connect(mapStateToProps)(Player);
