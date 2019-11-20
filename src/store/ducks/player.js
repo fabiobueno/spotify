@@ -14,7 +14,7 @@ export default function PLAYER(state = INITIAL_STATE, action) {
     case Types.LOAD:
       return {
         ...state,
-        currentSong: action.payload.soung,
+        currentSong: action.payload.song,
         status: Sound.status.PLAYING
       };
 

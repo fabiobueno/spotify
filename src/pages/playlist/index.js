@@ -17,7 +17,7 @@ class Playlist extends Component {
   static propTypes = {
     match: PropTypes.shape({
       params: PropTypes.shape({
-        id: PropTypes.number
+        id: PropTypes.string
       })
     }).isRequired,
     getPlaylistDetailsRequest: PropTypes.func.isRequired,
@@ -74,13 +74,15 @@ class Playlist extends Component {
 
         <SongList cellPadding={0} cellSpacing={0}>
           <thead>
-            <th></th>
-            <th>Título</th>
-            <th>Artistas</th>
-            <th>Álbum</th>
-            <th>
-              <img src={ClockIcon} alt="Duração" />
-            </th>
+            <tr>
+              <th></th>
+              <th>Título</th>
+              <th>Artistas</th>
+              <th>Álbum</th>
+              <th>
+                <img src={ClockIcon} alt="Duração" />
+              </th>
+            </tr>
           </thead>
 
           <tbody>
@@ -112,7 +114,7 @@ class Playlist extends Component {
 
   render() {
     return this.props.playlistDetails.loading ? (
-      <Container loading>
+      <Container loading="true">
         <Loading></Loading>
       </Container>
     ) : (

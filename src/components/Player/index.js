@@ -26,10 +26,7 @@ import RepeatIcon from "../../assets/images/repeat.svg";
 const Player = ({ player }) => (
   <Container>
     {!!player.currentSong && (
-      <Sound
-        url={player.currentSong.file}
-        playStatus={player.currentSong.status}
-      ></Sound>
+      <Sound url={player.currentSong.file} playStatus={player.status}></Sound>
     )}
     <Current>
       <img
