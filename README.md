@@ -1,3 +1,19 @@
-yarn start
+# Spotify Clone With React.js
 
-json-server server.json -p 3001 -w -d 500
+## Project created to study React.js
+
+### Install JSON-SERVER
+
+`yarn global add json-server`
+
+### Install Dependencies
+
+`yarn install`
+
+### Start JSON-SERVER
+
+`json-server server.json -p 3001 -w -d 500`
+
+### Start Project
+
+`yarn start`
